@@ -1,0 +1,31 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "Pizza CLI",
+  "main": "./lib/index.js",
+  "bin": {
+    "pizza": "./lib/index.js"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "local": "sudo npm i -g && pizza",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "author": "Didier Munezero",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^8.2.0",
+    "figlet": "^1.5.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.1",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}
