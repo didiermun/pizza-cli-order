@@ -1,10 +1,17 @@
 {
-  "name": "cli",
+  "name": "@didiermun/pizza-cli-order",
   "version": "1.0.0",
   "description": "Pizza CLI",
   "main": "./lib/index.js",
   "bin": {
     "pizza": "./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/didiermun/pizza-cli-order.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@didiermun"
   },
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
